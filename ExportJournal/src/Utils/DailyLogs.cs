@@ -100,9 +100,10 @@ namespace ExportJournal
             if (dailyLog.m_LocationLocIDs != null)
             {
                 newEntry.LocationsDiscoveredCount = dailyLog.m_LocationLocIDs.Count;
-                foreach (string LocationDiscovered in dailyLog.m_LocationLocIDs)
+                for (int i = 0; i < dailyLog.m_LocationLocIDs.Count; i++)
                 {
-                    newEntry.LocationsDiscovered.Add(Localization.Get(LocationDiscovered));
+                    string regionLocationText = Localization.Get(dailyLog.m_RegionLocIDs[i]) + " - " + Localization.Get(dailyLog.m_LocationLocIDs[i]);
+                    newEntry.LocationsDiscovered.Add(regionLocationText);
                 }
             }
             newEntry.WorldExploredPercent = dailyLog.m_WorldExplored;
