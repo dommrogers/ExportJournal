@@ -1,9 +1,7 @@
 ﻿using Il2Cpp;
 using Il2CppTLD.Stats;
-using Il2CppList = Il2CppSystem.Collections.Generic;
 using MelonLoader;
 using MelonLoader.TinyJSON;
-using static Il2Cpp.HoverIconsToShow;
 
 namespace ExportJournal
 {
@@ -108,8 +106,8 @@ namespace ExportJournal
             }
             newEntry.WorldExploredPercent = dailyLog.m_WorldExplored;
             newEntry.HoursRested = dailyLog.m_HoursRested;
-            newEntry.ConditionRange.Add("Min", dailyLog.m_ConditionLow);
-            newEntry.ConditionRange.Add("Max", dailyLog.m_ConditionHigh);
+            newEntry.ConditionRangePercent.Add("Min", dailyLog.m_ConditionLow);
+            newEntry.ConditionRangePercent.Add("Max", dailyLog.m_ConditionHigh);
             newEntry.CaloriesBurned = dailyLog.m_CaloriesBurned;
             if (dailyLog.m_Afflictions != null)
             {
@@ -137,9 +135,9 @@ namespace ExportJournal
             }
             dailyEntryText += "WorldExploredPercent: " + dailyEntry.WorldExploredPercent + "\n";
             dailyEntryText += "HoursRested: " + dailyEntry.HoursRested + "\n";
-            dailyEntryText += "ConditionRange: " + dailyEntry.ConditionRange["Min"] + " - " + dailyEntry.ConditionRange["Max"] + "\n";
-            dailyEntryText += " - Min: " + dailyEntry.ConditionRange["Min"] + "\n";
-            dailyEntryText += " - Max: " + dailyEntry.ConditionRange["Max"] + "\n";
+            dailyEntryText += "ConditionRangePercent: " + "\n";
+            dailyEntryText += " - Min: " + dailyEntry.ConditionRangePercent["Min"] + "\n";
+            dailyEntryText += " - Max: " + dailyEntry.ConditionRangePercent["Max"] + "\n";
             dailyEntryText += "CaloriesBurned: " + dailyEntry.CaloriesBurned + "\n";
             dailyEntryText += "InjuriesSustained: " + dailyEntry.InjuriesSustainedCount + "\n";
             foreach (string InjurieSustained in dailyEntry.InjuriesSustained)
@@ -157,7 +155,7 @@ namespace ExportJournal
             public List<string> LocationsDiscovered = new();
             public int WorldExploredPercent = 0;
             public int HoursRested = 0;
-            public Dictionary<string, int> ConditionRange = new();
+            public Dictionary<string, int> ConditionRangePercent = new();
             public int CaloriesBurned = 0;
             public int InjuriesSustainedCount = 0;
             public List<string> InjuriesSustained = new();
