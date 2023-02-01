@@ -32,20 +32,22 @@ namespace ExportJournal
                 return;
             }
 
+            NoteEntry notes = new();
+            notes.GeneralNotes = generalNotes;
+
             // write out text file
             if (Settings.options.exportToTxt == true)
             {
                 string filePath = Path.Combine(Main.saveToFolder, fileName + ".txt"); ;
-                Main.WriteToFile(filePath, generalNotes);
+                Main.WriteToFile(filePath, notes.GeneralNotes);
                 wroteTo += "TXT|";
             }
 
             // write out json file
             if (Settings.options.exportToJson == true)
             {
-                object jsonObject = new { GeneralNotes = generalNotes };
                 string filePath = Path.Combine(Main.saveToFolder, fileName + ".json");
-                string json = JSON.Dump(jsonObject, EncodeOptions.PrettyPrint | EncodeOptions.NoTypeHints);
+                string json = JSON.Dump(notes, EncodeOptions.PrettyPrint | EncodeOptions.NoTypeHints);
                 Main.WriteToFile(filePath, json);
                 wroteTo += "JSON|";
             }
@@ -59,6 +61,11 @@ namespace ExportJournal
             //}
 
             MelonLogger.Msg("- done |" + wroteTo + "");
+        }
+
+        public class NoteEntry
+        {
+            public string GeneralNotes = "";
         }
 
     }
