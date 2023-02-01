@@ -77,6 +77,12 @@ internal sealed class Main : MelonMod
             DailyLogs.Generate();
         }
 
+        // should we write out the skills ?
+        if (Settings.options.exportSkills == true)
+        {
+            Skills.Generate();
+        }
+
         // should we write out the general notes ?
         if (Settings.options.exportGeneralNotes == true)
         {

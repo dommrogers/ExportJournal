@@ -25,6 +25,10 @@ namespace ExportJournal
         [Description("Export the daily log notes and stats")]
         public bool exportDailyLog = true;
 
+        [Name("Skills")]
+        [Description("Export the skills")]
+        public bool exportSkills = true;
+
         [Name("General Notes")]
         [Description("Export the general notes")]
         public bool exportGeneralNotes = true;

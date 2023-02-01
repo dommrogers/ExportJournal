@@ -21,12 +21,12 @@ namespace ExportJournal
             }
         }
 
-        [HarmonyPatch(typeof(Log), nameof(Log.GetInfoForDay), new Type[] { typeof(int) })]
-        private static class Log_GetInfoForDay
+        [HarmonyPatch(typeof(SkillsManager), nameof(SkillsManager.GetSkillFromIndex), new Type[] { typeof(int) })]
+        private static class SkillManager_GetSkillFromIndex
         {
-            private static void Prefix(int dayNumber)
+            private static void Prefix(int index)
             {
-                MelonLogger.Msg("Log_GetInfoForDay "+ dayNumber);
+                MelonLogger.Msg("SkillManager_GetSkillFromIndex " + index);
             }
         }
 
