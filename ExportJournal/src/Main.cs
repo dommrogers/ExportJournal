@@ -78,6 +78,12 @@ internal sealed class Main : MelonMod
             Skills.Generate();
         }
 
+        // should we write out the collections ?
+        if (Settings.options.exportCollections == true)
+        {
+            Collections.Generate();
+        }
+
         // should we write out the general notes ?
         if (Settings.options.exportGeneralNotes == true)
         {

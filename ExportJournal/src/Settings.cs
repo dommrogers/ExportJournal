@@ -27,6 +27,10 @@ namespace ExportJournal
         [Description("Export the skills")]
         public bool exportSkills = true;
 
+        [Name("Collections")]
+        [Description("Export the collections")]
+        public bool exportCollections = true;
+
         [Name("General Notes")]
         [Description("Export the general notes")]
         public bool exportGeneralNotes = true;
