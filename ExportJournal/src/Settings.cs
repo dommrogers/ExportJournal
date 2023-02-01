@@ -1,6 +1,4 @@
-﻿using ModSettings;
-using System.Reflection;
-
+﻿
 namespace ExportJournal
 {
     internal static class Settings

@@ -1,9 +1,4 @@
-﻿using Il2Cpp;
-using MelonLoader;
-using MelonLoader.Utils;
-using System.Text;
-using UnityEngine;
-
+﻿
 namespace ExportJournal;
 
 internal sealed class Main : MelonMod

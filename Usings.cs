@@ -1,0 +1,10 @@
+﻿global using HarmonyLib;
+global using Il2Cpp;
+global using Il2CppTLD.Stats;
+global using MelonLoader;
+global using MelonLoader.TinyJSON;
+global using MelonLoader.Utils;
+global using ModSettings;
+global using System.Reflection;
+global using System.Text;
+global using UnityEngine;

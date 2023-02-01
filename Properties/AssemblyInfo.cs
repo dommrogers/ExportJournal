@@ -1,5 +1,3 @@
-using MelonLoader;
-using System.Reflection;
 
 //This is a C# comment. Comments have no impact on compilation.
 

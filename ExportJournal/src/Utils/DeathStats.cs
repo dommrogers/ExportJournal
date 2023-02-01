@@ -1,7 +1,4 @@
-﻿using Il2Cpp;
-using MelonLoader;
-using MelonLoader.TinyJSON;
-
+﻿
 namespace ExportJournal
 {
     internal class DeathStats

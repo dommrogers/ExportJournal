@@ -1,8 +1,4 @@
-﻿using Il2Cpp;
-using Il2CppTLD.Stats;
-using MelonLoader;
-using MelonLoader.TinyJSON;
-
+﻿
 namespace ExportJournal
 {
     internal class DailyLogs
