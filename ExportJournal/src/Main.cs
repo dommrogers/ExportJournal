@@ -15,22 +15,22 @@ internal sealed class Main : MelonMod
     }
 
 
-    public override void OnUpdate()
-    {
-        if (InputManager.GetKeyDown(InputManager.m_CurrentContext, KeyCode.B))
-        {
+    //public override void OnUpdate()
+    //{
+    //    if (InputManager.GetKeyDown(InputManager.m_CurrentContext, KeyCode.B))
+    //    {
 
-            if (InterfaceManager.GetInstance().AnyOverlayPanelEnabled())
-            {
-                MelonLogger.Msg("Overlay/Panel Open..");
-                return;
-            }
+    //        if (InterfaceManager.GetInstance().AnyOverlayPanelEnabled())
+    //        {
+    //            MelonLogger.Msg("Overlay/Panel Open..");
+    //            return;
+    //        }
 
-            // perform the export
-            PerformExport();
+    //        // perform the export
+    //        PerformExport();
 
-        }
-    }
+    //    }
+    //}
 
 
     public static void PerformExport(bool writeDeathStats = false, string? overrideCauseOfDeath = null)
