@@ -12,7 +12,6 @@ namespace ExportJournal
         internal static void Execute()
         {
             Main.PerformExport();
-            HUDMessage.AddMessage("Journal Exported", 2, true, true);
         }
 
         [HarmonyPatch(typeof(GameManager), nameof(GameManager.HandlePlayerDeath), new Type[] { typeof(string) })]
@@ -27,14 +26,14 @@ namespace ExportJournal
             }
         }
 
-        [HarmonyPatch(typeof(SkillsManager), nameof(SkillsManager.GetSkillFromIndex), new Type[] { typeof(int) })]
-        private static class SkillManager_GetSkillFromIndex
-        {
-            private static void Prefix(int index)
-            {
-                MelonLogger.Msg("SkillManager_GetSkillFromIndex " + index);
-            }
-        }
+        //[HarmonyPatch(typeof(SkillsManager), nameof(SkillsManager.GetSkillFromIndex), new Type[] { typeof(int) })]
+        //private static class SkillManager_GetSkillFromIndex
+        //{
+        //    private static void Prefix(int index)
+        //    {
+        //        MelonLogger.Msg("SkillManager_GetSkillFromIndex " + index);
+        //    }
+        //}
 
         [HarmonyPatch(typeof(Panel_Log), nameof(Panel_Log.OnBack))]
         private static class Panel_Log_OnBack

@@ -39,6 +39,10 @@ namespace ExportJournal
                 collectionsListText += "CairnsCount: " + collectionsList.CairnsCount + "\n";
                 collectionsListText += "BufferMemoriesCount: " + collectionsList.BufferMemoriesCount + "\n";
                 collectionsListText += "SurveyedLocationsCount: " + collectionsList.SurveyedLocationsCount + "\n";
+                foreach (string location in collectionsList.SurveyedLocations)
+                {
+                    collectionsListText += " - " + location + "\n";
+                }
 
 
                 string filePath = Path.Combine(Main.saveToFolder, fileName + ".txt"); ;
@@ -70,16 +74,34 @@ namespace ExportJournal
         public static CollectionsList BuildCollectionsList()
         {
             CollectionsList collectionList = new();
-            Panel_Log dummyPanel = new Panel_Log();
-            dummyPanel.RefreshCollectibleCounters();
-            dummyPanel.BuildCartographyRegionList();
+            Panel_Log panel_log = InterfaceManager.GetPanel<Panel_Log>();
+            panel_log.RefreshCollectibleCounters();
+            panel_log.BuildCartographyRegionList();
 
-            collectionList.NotesCount = dummyPanel.m_CurrNumNoteCollectibles;
-            collectionList.PolaroidsCount = dummyPanel.m_CurrNumPostcardCollectibles;
-            collectionList.MementosCount = dummyPanel.m_CurrNumMementoCollectibles;
-            collectionList.CairnsCount = dummyPanel.m_CurrNumCairnCollectibles;
-            collectionList.BufferMemoriesCount = dummyPanel.m_CurrNumAuroraScreenCollectibles;
-            collectionList.SurveyedLocationsCount = dummyPanel.m_SurveyedLocations;
+            collectionList.NotesCount = panel_log.m_CurrNumNoteCollectibles;
+            collectionList.PolaroidsCount = panel_log.m_CurrNumPostcardCollectibles;
+            collectionList.MementosCount = panel_log.m_CurrNumMementoCollectibles;
+            collectionList.CairnsCount = panel_log.m_CurrNumCairnCollectibles;
+            collectionList.BufferMemoriesCount = panel_log.m_CurrNumAuroraScreenCollectibles;
+            collectionList.SurveyedLocationsCount = panel_log.m_SurveyedLocations;
+
+            List<string> locations = new();
+            if (panel_log.m_SurveyRegionList != null && panel_log.m_SurveyRegionList.Count > 0)
+            {
+                foreach (SurveyRegionInfo regionInfo in panel_log.m_SurveyRegionList)
+                {
+                    if (regionInfo.m_IsUnlocked && regionInfo.m_Achievements != null && regionInfo.m_Achievements.Count > 0) {
+                        foreach (SurveyAchievementInfo achievementInfo in regionInfo.m_Achievements)
+                        {
+                            if (achievementInfo.m_Completed) {
+                                locations.Add(regionInfo.m_RegionName + " - " + achievementInfo.m_AchievementName);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            collectionList.SurveyedLocations = locations;
 
             return collectionList;
         }
@@ -92,6 +114,7 @@ namespace ExportJournal
             public int CairnsCount = 0;
             public int BufferMemoriesCount = 0;
             public int SurveyedLocationsCount = 0;
+            public List<string> SurveyedLocations = new();
         }
 
     }

@@ -95,6 +95,9 @@ internal sealed class Main : MelonMod
         {
             DeathStats.Generate(overrideCauseOfDeath);
         }
+
+        HUDMessage.AddMessage("Journal Exported", 2, true, true);
+
     }
 
     
