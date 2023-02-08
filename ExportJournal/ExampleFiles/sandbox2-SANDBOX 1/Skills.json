@@ -1,0 +1,47 @@
+﻿[
+	{
+		"SkillName": "Carcass Harvesting",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	},
+	{
+		"SkillName": "Cooking",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	},
+	{
+		"SkillName": "Fire Starting",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	},
+	{
+		"SkillName": "Ice Fishing",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	},
+	{
+		"SkillName": "Rifle Firearm",
+		"SkillLevel": 2,
+		"SkillProgressionPercent": 13
+	},
+	{
+		"SkillName": "Archery",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 67
+	},
+	{
+		"SkillName": "Mending",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	},
+	{
+		"SkillName": "Revolver Firearm",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	},
+	{
+		"SkillName": "Gunsmithing",
+		"SkillLevel": 1,
+		"SkillProgressionPercent": 0
+	}
+]

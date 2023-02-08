@@ -1,0 +1,16 @@
+﻿NotesCount: 6
+PolaroidsCount: 1
+MementosCount: 4
+CairnsCount: 4
+BufferMemoriesCount: 1
+SurveyedLocationsCount: 10
+ - Coastal Highway - Abandoned Lookout
+ - Coastal Highway - Coastal Townsite
+ - Coastal Highway - Commuter's Lament
+ - Coastal Highway - Jackrabbit Island
+ - Coastal Highway - Log Sort
+ - Coastal Highway - Misanthrope's Homestead
+ - Coastal Highway - Quonset Garage
+ - Coastal Highway - To Crumbling Highway
+ - Timberwolf Mountain - Crystal Lake
+ - Timberwolf Mountain - To Cave System

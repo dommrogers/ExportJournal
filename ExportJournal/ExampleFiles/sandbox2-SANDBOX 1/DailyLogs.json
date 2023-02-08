@@ -1,0 +1,160 @@
+﻿[
+	{
+		"Day": 1,
+		"LocationsDiscoveredCount": 9,
+		"LocationsDiscovered": [
+			"Ash Canyon - Broad Falls",
+			"Ash Canyon - Miner's Folly",
+			"Ash Canyon - Cabin",
+			"Ash Canyon - Angler's Den",
+			"Ash Canyon - Gold Mine",
+			"Timberwolf Mountain - Echo Ravine",
+			"Timberwolf Mountain - Tail Section",
+			"Timberwolf Mountain - Crystal Lake",
+			"Timberwolf Mountain - Mountaineer's Hut"
+		],
+		"WorldExploredPercent": 3,
+		"HoursRested": 10,
+		"ConditionRangePercent": {
+			"Min": 91,
+			"Max": 100
+		},
+		"CaloriesBurned": 717,
+		"InjuriesSustainedCount": 3,
+		"InjuriesSustained": [
+			"FoodPoisioning",
+			"SprainPain",
+			"SprainedAnkle"
+		],
+		"Notes": ""
+	},
+	{
+		"Day": 2,
+		"LocationsDiscoveredCount": 3,
+		"LocationsDiscovered": [
+			"Timberwolf Mountain - Wing",
+			"Timberwolf Mountain - Landing Gear",
+			"Pleasant Valley - Prepper's Abandoned Cache"
+		],
+		"WorldExploredPercent": 4,
+		"HoursRested": 22,
+		"ConditionRangePercent": {
+			"Min": 100,
+			"Max": 100
+		},
+		"CaloriesBurned": 992,
+		"InjuriesSustainedCount": 0,
+		"InjuriesSustained": [],
+		"Notes": null
+	},
+	{
+		"Day": 3,
+		"LocationsDiscoveredCount": 8,
+		"LocationsDiscovered": [
+			"Pleasant Valley - Pleasant Valley Outbuildings",
+			"Pleasant Valley - Barn",
+			"Pleasant Valley - Thomson's Crossing",
+			"Pleasant Valley - Community Hall",
+			"Pleasant Valley - Rural Store",
+			" - Abandoned Mine",
+			"Coastal Highway - Coastal Townsite",
+			"Coastal Highway - Quonset Garage"
+		],
+		"WorldExploredPercent": 7,
+		"HoursRested": 13,
+		"ConditionRangePercent": {
+			"Min": 100,
+			"Max": 100
+		},
+		"CaloriesBurned": 1141,
+		"InjuriesSustainedCount": 0,
+		"InjuriesSustained": [],
+		"Notes": "day 3 notes"
+	},
+	{
+		"Day": 4,
+		"LocationsDiscoveredCount": 11,
+		"LocationsDiscovered": [
+			"Coastal Highway - Commuter's Lament",
+			" - Abandoned Harris Home",
+			"Crumbling Highway - Basement",
+			" - No. 3 Coal Mine",
+			"Desolation Point - Lonely Lighthouse",
+			"Desolation Point - Stone Church",
+			"Desolation Point - The Riken",
+			"Desolation Point - Hibernia Processing",
+			"Desolation Point - Waterfall",
+			"Desolation Point - Cave",
+			"Desolation Point - Lonely Lighthouse"
+		],
+		"WorldExploredPercent": 11,
+		"HoursRested": 22,
+		"ConditionRangePercent": {
+			"Min": 95,
+			"Max": 100
+		},
+		"CaloriesBurned": 1008,
+		"InjuriesSustainedCount": 0,
+		"InjuriesSustained": [],
+		"Notes": "Day, getting tired of writing notes to myself."
+	},
+	{
+		"Day": 5,
+		"LocationsDiscoveredCount": 8,
+		"LocationsDiscovered": [
+			" - No. 3 Coal Mine",
+			"Coastal Highway - Cabin",
+			"Coastal Highway - Misanthrope's Homestead",
+			"Coastal Highway - Abandoned Lookout",
+			"Coastal Highway - Jackrabbit Island",
+			"Coastal Highway - Abandoned Lookout",
+			"Coastal Highway - Coastal Townsite",
+			"Coastal Highway - Quonset Garage"
+		],
+		"WorldExploredPercent": 12,
+		"HoursRested": 15,
+		"ConditionRangePercent": {
+			"Min": 84,
+			"Max": 100
+		},
+		"CaloriesBurned": 992,
+		"InjuriesSustainedCount": 0,
+		"InjuriesSustained": [],
+		"Notes": "survived 3 days 20 hours"
+	},
+	{
+		"Day": 6,
+		"LocationsDiscoveredCount": 0,
+		"LocationsDiscovered": [],
+		"WorldExploredPercent": 12,
+		"HoursRested": 15,
+		"ConditionRangePercent": {
+			"Min": 83,
+			"Max": 84
+		},
+		"CaloriesBurned": 6,
+		"InjuriesSustainedCount": 0,
+		"InjuriesSustained": [],
+		"Notes": null
+	},
+	{
+		"Day": 7,
+		"LocationsDiscoveredCount": 4,
+		"LocationsDiscovered": [
+			"Coastal Highway - Quonset Garage",
+			"Coastal Highway - Coastal Townsite",
+			"Coastal Highway - Commuter's Lament",
+			" - No. 3 Coal Mine"
+		],
+		"WorldExploredPercent": 12,
+		"HoursRested": 0,
+		"ConditionRangePercent": {
+			"Min": 79,
+			"Max": 83
+		},
+		"CaloriesBurned": 312,
+		"InjuriesSustainedCount": 0,
+		"InjuriesSustained": [],
+		"Notes": null
+	}
+]

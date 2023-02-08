@@ -1,0 +1,10 @@
+﻿RegionName: Coastal Highway
+RockCacheCount: 2
+ - Test 111
+ - Rock Cache2
+RegionName: Crumbling Highway
+RockCacheCount: 1
+ - Rock Cache3
+RegionName: Desolation Point
+RockCacheCount: 1
+ - DP Cache

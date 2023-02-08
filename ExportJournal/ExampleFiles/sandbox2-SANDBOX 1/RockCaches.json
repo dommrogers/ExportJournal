@@ -1,0 +1,24 @@
+﻿[
+	{
+		"RegionName": "Coastal Highway",
+		"RockCacheCount": 2,
+		"RockCaches": [
+			"Test 111",
+			"Rock Cache2"
+		]
+	},
+	{
+		"RegionName": "Crumbling Highway",
+		"RockCacheCount": 1,
+		"RockCaches": [
+			"Rock Cache3"
+		]
+	},
+	{
+		"RegionName": "Desolation Point",
+		"RockCacheCount": 1,
+		"RockCaches": [
+			"DP Cache"
+		]
+	}
+]
