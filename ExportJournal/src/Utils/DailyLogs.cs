@@ -21,7 +21,7 @@ namespace ExportJournal
 
             // collect the daily logs
             List<DailyEntry> dailyLogEntries = BuildDailyLogs();
-            MelonLogger.Msg("dailyLogEntries = " + dailyLogEntries.Count);
+//            MelonLogger.Msg("dailyLogEntries = " + dailyLogEntries.Count);
 
             if (dailyLogEntries.Count == 0)
             {
@@ -61,7 +61,7 @@ namespace ExportJournal
             //    wroteTo += "YAML|";
             //}
 
-            MelonLogger.Msg("- done |" + wroteTo + "");
+            //MelonLogger.Msg("- done |" + wroteTo + "");
         }
 
         private static List<DailyEntry> BuildDailyLogs()
@@ -69,7 +69,7 @@ namespace ExportJournal
             List<DailyEntry> list = new();
 
             int currentDay = GameManager.GetTimeOfDayComponent().GetDayNumber();
-            MelonLogger.Msg("current day - " + currentDay);
+            //MelonLogger.Msg("current day - " + currentDay);
 
             // get the game entries
             Log logComponent = GameManager.GetLogComponent();

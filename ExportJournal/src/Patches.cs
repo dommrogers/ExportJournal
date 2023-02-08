@@ -1,7 +1,4 @@
 ﻿
-using Il2Cpp;
-using UnityEngine;
-
 namespace ExportJournal
 {
     internal class Patches
@@ -17,11 +14,11 @@ namespace ExportJournal
         [HarmonyPatch(typeof(GameManager), nameof(GameManager.HandlePlayerDeath), new Type[] { typeof(string) })]
         private static class GameManager_HandlePlayerDeath
         {
-            private static void Prefix(GameManager __instance, string overrideCauseOfDeath)
+            private static void Prefix(GameManager __instance)
             {
                 if (Settings.options.exportOnDeath == true)
                 {
-                    Main.PerformExport(Settings.options.exportDeathStats, overrideCauseOfDeath);
+                    Main.PerformExport();
                 }
             }
         }
@@ -42,7 +39,7 @@ namespace ExportJournal
             {
                 if (exportButton != null)
                 {
-                    MelonLogger.Msg("Panel_Log_OnBack");
+//                    MelonLogger.Msg("Panel_Log_OnBack");
                     Utils.Destroy(exportButton);
                     exportButton = null;
                 }

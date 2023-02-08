@@ -67,7 +67,7 @@ namespace ExportJournal
             //    wroteTo += "YAML|";
             //}
 
-            MelonLogger.Msg("- done |" + wroteTo + "");
+            //MelonLogger.Msg("- done |" + wroteTo + "");
         }
 
 

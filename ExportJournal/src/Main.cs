@@ -33,7 +33,7 @@ internal sealed class Main : MelonMod
     //}
 
 
-    public static void PerformExport(bool writeDeathStats = false, string? overrideCauseOfDeath = null)
+    public static void PerformExport()
     {
         MelonLogger.Msg("Exporting journal...");
         SaveSlotInfo activeGame = SaveGameSystem.GetNewestSaveSlotForActiveGame();
@@ -96,20 +96,15 @@ internal sealed class Main : MelonMod
             GeneralNotes.Generate();
         }
 
-        // should we export the death stats
-        if (writeDeathStats == true)
+        // should we write out the stats ?
+        if (Settings.options.exportStats == true)
         {
-            DeathStats.Generate(overrideCauseOfDeath);
+            Stats.Generate();
         }
 
         HUDMessage.AddMessage("Journal Exported", 2, true, true);
 
     }
-
-    
-
-    
-
     
 
     public static void WriteToFile(string filePath, string contents)

@@ -60,7 +60,7 @@ namespace ExportJournal
             //    wroteTo += "YAML|";
             //}
 
-            MelonLogger.Msg("- done |" + wroteTo + "");
+            //MelonLogger.Msg("- done |" + wroteTo + "");
         }
 
         public static string BuildRockCacheText(RockCacheRegion rockCacheRegion)
@@ -94,21 +94,21 @@ namespace ExportJournal
             Panel_Log panel_log = InterfaceManager.GetPanel<Panel_Log>();
             panel_log.GenerateRockCacheScreenData();
 
-            MelonLogger.Warning("panel_log.m_RockCacheListByRegion.Count = " + panel_log.m_RockCacheListByRegion.Count);
+//            MelonLogger.Warning("panel_log.m_RockCacheListByRegion.Count = " + panel_log.m_RockCacheListByRegion.Count);
 
             foreach (Il2CppSystem.Collections.Generic.KeyValuePair<string, Il2CppSystem.Collections.Generic.List<RockCacheInfo>> item in panel_log.m_RockCacheListByRegion)
             {
-                MelonLogger.Warning("panel_log.m_RockCacheListByRegion[x].name = " + item.key);
+ //               MelonLogger.Warning("panel_log.m_RockCacheListByRegion[x].name = " + item.key);
                 if (item.value != null && item.value.Count > 0)
                 {
-                    MelonLogger.Warning("panel_log.m_RockCacheListByRegion[x].Count = " + item.value.Count);
+//                    MelonLogger.Warning("panel_log.m_RockCacheListByRegion[x].Count = " + item.value.Count);
                     RockCacheRegion rockCacheRegion = new();
                     rockCacheRegion.RegionName = InterfaceManager.GetNameForScene(item.key);
-                    MelonLogger.Warning("rockCacheRegion.RegionName = " + rockCacheRegion.RegionName);
+//                    MelonLogger.Warning("rockCacheRegion.RegionName = " + rockCacheRegion.RegionName);
 
                     foreach (RockCacheInfo rockCacheInfo in item.value)
                     {
-                        MelonLogger.Warning("rockCacheInfo.m_CustomName = " + rockCacheInfo.m_CustomName);
+//                        MelonLogger.Warning("rockCacheInfo.m_CustomName = " + rockCacheInfo.m_CustomName);
                         rockCacheRegion.RockCaches.Add(rockCacheInfo.m_CustomName);
                         rockCacheRegion.RockCacheCount++;
                     }

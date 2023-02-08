@@ -9,7 +9,6 @@ namespace ExportJournal
         {
             options = new EJSettings();
             options.AddToModSettings("Export Journal");
-            options.RefreshFields();
         }
 
 
@@ -39,15 +38,19 @@ namespace ExportJournal
         [Description("Export the general notes")]
         public bool exportGeneralNotes = true;
 
+        [Name("Stats")]
+        [Description("Export the stats")]
+        public bool exportStats = true;
+
         [Section("Export options")]
 
         [Name("Auto Export on death")]
         [Description("Do you want to auto export the Journal if/when your character dies")]
         public bool exportOnDeath = true;
 
-        [Name("Export death data")]
-        [Description("Export some stats about the death")]
-        public bool exportDeathStats = true;
+        //[Name("Export death data")]
+        //[Description("Export some stats about the death")]
+        //public bool exportDeathStats = true;
 
         [Name("Add timestamp to file")]
         [Description("Add a timestamp prefix to the file (e.g. 20230101_0000_)\n\n** NOTE: Setting this to false will overwrite existing journal files for the current save.")]
@@ -63,24 +66,10 @@ namespace ExportJournal
         [Description("Export the above selection in JSON format")]
         public bool exportToJson = true;
 
-        [Section("YAML format coming soon...")]
+//        [Section("YAML format coming soon...")]
+//        [Name("Export as YAML")]
+//        [Description("Export the above selection in YAML format")]
+//        public bool exportToYaml = true;
 
-        [Name("Export as YAML")]
-        [Description("Export the above selection in YAML format")]
-        public bool exportToYaml = true;
-
-        internal void RefreshFields()
-        {
-            SetFieldVisible(nameof(exportDeathStats), Settings.options.exportOnDeath != false);
-        }
-        protected override void OnChange(FieldInfo field, object? oldValue, object? newValue)
-        {
-            if (
-                field.Name == nameof(exportOnDeath)
-                )
-            {
-                RefreshFields();
-            }
-        }
     }
 }
