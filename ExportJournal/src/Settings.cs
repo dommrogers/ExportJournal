@@ -31,6 +31,10 @@ namespace ExportJournal
         [Description("Export the collections")]
         public bool exportCollections = true;
 
+        [Name("Rock Caches")]
+        [Description("Export the rock caches")]
+        public bool exportRockCaches = true;
+
         [Name("General Notes")]
         [Description("Export the general notes")]
         public bool exportGeneralNotes = true;

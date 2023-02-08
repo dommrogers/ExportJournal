@@ -84,6 +84,12 @@ internal sealed class Main : MelonMod
             Collections.Generate();
         }
 
+        // should we write out the rock caches ?
+        if (Settings.options.exportRockCaches == true)
+        {
+            RockCaches.Generate();
+        }
+
         // should we write out the general notes ?
         if (Settings.options.exportGeneralNotes == true)
         {
